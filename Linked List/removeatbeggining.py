@@ -30,10 +30,32 @@ while curr.next!=None:
      curr=curr.next
 curr.next=endNode
 
+#insert at the middle
+middleNode=Node(9)
+k=4
+curr=head
+for i in range(k-2):
+     curr=curr.next
+middleNode.next=curr.next
+curr.next=middleNode
+
 #remove at beggining
 head=head.next
 
-#remove at 
+#remove at end
+curr=head
+while curr.next.next!=None:
+     curr=curr.next
+curr.next=None
+
+#remove at middle
+k=3
+curr=head 
+for i in range(k-2):
+     curr=curr.next
+curr.next=curr.next.next
+
+     
 
 
 printLL(head)
